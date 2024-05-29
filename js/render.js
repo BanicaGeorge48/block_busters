@@ -1,5 +1,6 @@
-function renderMovieListFromMap(list,) {
-
+export function renderMovieListFromMap(list,map) {
+    cleanMovieList()
+    list.forEach(movieId => renderElement(map.get(movieId)))
 }
 
 

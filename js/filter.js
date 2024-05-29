@@ -1,11 +1,25 @@
+import {
+    renderMovieListFromMap
+} from './render.js'
 
-filter.addEventListener('change', funcion() {
+import{
+    movieList,
+    all,
+    popular as mostValued,
+    notpopular as leastValued
+} from './normalize.js'
+
+filter.addEventListener('change', function() {
+    let result;
     switch (this.value) {
         case 'most-valued':
-            return 'most'
+            result = renderMovieListFromMap(mostValued, movieList);
+            break;
         case 'least-valued':
-            return 'least'
+            result = renderMovieListFromMap(leastValued, movieList);
+            break;
         default:
-            return 'all'
+            result = renderMovieListFromMap(all, movieList);
     }
+    console.log(result);
 })

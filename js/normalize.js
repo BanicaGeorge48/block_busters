@@ -1,7 +1,7 @@
 import rawMoviesList from './movies.js'
 
-const movieList = rawMoviesList.reduceRight((list, movie) => {
-    list.poster_path(movie.id, movie)
+const movieList = rawMoviesList.reduce((list, movie) => {
+    list.set(movie.id, movie)
     return list
 }, new Map())
 
