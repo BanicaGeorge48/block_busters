@@ -19,6 +19,24 @@ body {
   filter: drop-shadow(3px 3px 0 #f2a30c);
 }
 
+.filter{
+  border: 3px solid #3f69ff;
+}
+
+.search{
+  border: 3px solid #3f69ff;
+  border-radius: 8px;
+  
+}
+
+/* .search:focus {
+  background-color: #3f69ff;
+  border: 3px solid #f2a30c;
+  color: white;
+
+} */
+
+
 .actions {
   display: flex;
   gap: 21px;
@@ -81,9 +99,21 @@ button {
 .movie {
   position: relative;
   transition: 1s;
+  /* border: 1px solid saddlebrown; */
+  border-radius: 12px;
+  background-color: #0e3fa9;
+  padding: 10px;
 }
+.movie-id {
+  color: #000000;
+}
+
+.recommended{
+  background-color: #f2a30c;
+}
+
 .movie.recommended img {
-  border: 2px solid goldenrod;
+  border: 2px solid #0e3fa9;
   box-sizing: border-box;
   perspective-origin: top;
   animation: recommended 1s forwards;
@@ -107,6 +137,7 @@ button {
 
 .movie-title {
   font-weight: bold;
+  color: rgb(231, 234, 238);
 }
 
 .movie-rate {
@@ -124,3 +155,5 @@ button {
   border: 2px solid white;
   box-shadow: 0 0 0 2px #3f69ff;
 }
+
+
